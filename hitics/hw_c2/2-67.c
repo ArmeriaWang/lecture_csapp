@@ -1,7 +1,5 @@
 // 2.67, P90
 
-// A: 右移后的位数大于int型字节宽度
-
 #include <stdio.h>
 #include <limits.h>
 

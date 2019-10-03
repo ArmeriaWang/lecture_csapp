@@ -1,0 +1,3 @@
+﻿  vs_xyz.cpp
+C:\Users\Armeria\Work\lectures\csapp_windows\hitics\lab2\vs_xyz\vs_xyz\vs_xyz\vs_xyz.cpp(11,31): warning C4305: “初始化”: 从“__int64”到“double”截断
+  vs_xyz.vcxproj -> C:\Users\Armeria\Work\lectures\csapp_windows\hitics\lab2\vs_xyz\vs_xyz\Debug\vs_xyz.exe
