@@ -8,6 +8,12 @@ char *cs_itoa(int x) {
 	static char ret[MAX_LEN];
 	char tmp[MAX_LEN];
 	int p = 0, sign = 1;
+
+	if (x == 0) {
+		strcpy(ret, "0");
+		return ret;
+	}
+
 	if (x < 0) {
 		sign = -1;
 		x = -x;
