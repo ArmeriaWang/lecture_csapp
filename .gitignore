@@ -1,2 +1,11 @@
 !*.c
 *.exe
+*.d
+hitics/lab*
+hitics/hw*
+hitics/ppt
+hitics/*.pdf
+hitics/others
+hitics/icsproj/*
+!hitics/icsproj/submit
+!hitics/icsproj/submit/*

@@ -1,44 +1,60 @@
 	.file	"xyz.c"
-	.section	.rodata.str1.1,"aMS",@progbits,1
+	.globl	x_int
+	.section	.rodata
+	.align 4
+	.type	x_int, @object
+	.size	x_int, 4
+x_int:
+	.long	-1183710106
 .LC1:
+	.string	"%d\n"
+.LC2:
 	.string	"x = %d\ny = %lf\nz = %s\n"
 	.text
 	.globl	main
 	.type	main, @function
 main:
-.LFB11:
+.LFB0:
 	.cfi_startproc
-	subq	$8, %rsp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
-	leaq	z.2248(%rip), %rdx
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp
 	movsd	.LC0(%rip), %xmm0
-	movl	x(%rip), %esi
+	movsd	%xmm0, -8(%rbp)
+	movl	$-1183710106, %eax
+	movl	%eax, %esi
 	leaq	.LC1(%rip), %rdi
+	movl	$0, %eax
+	call	printf@PLT
+	movl	$-1183710106, %ecx
+	movq	-8(%rbp), %rax
+	leaq	z_string.2212(%rip), %rdx
+	movq	%rax, -24(%rbp)
+	movsd	-24(%rbp), %xmm0
+	movl	%ecx, %esi
+	leaq	.LC2(%rip), %rdi
 	movl	$1, %eax
 	call	printf@PLT
 	movl	$0, %eax
-	addq	$8, %rsp
-	.cfi_def_cfa_offset 8
+	leave
+	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE11:
+.LFE0:
 	.size	main, .-main
 	.data
 	.align 16
-	.type	z.2248, @object
-	.size	z.2248, 22
-z.2248:
+	.type	z_string.2212, @object
+	.size	z_string.2212, 22
+z_string.2212:
 	.string	"1183710106-WangHankun"
-	.globl	x
-	.align 4
-	.type	x, @object
-	.size	x, 4
-x:
-	.long	1183710106
-	.section	.rodata.cst8,"aM",@progbits,8
+	.section	.rodata
 	.align 8
 .LC0:
-	.long	1004282543
+	.long	1004282570
 	.long	1133699368
 	.ident	"GCC: (Debian 6.3.0-18+deb9u1) 6.3.0 20170516"
 	.section	.note.GNU-stack,"",@progbits
