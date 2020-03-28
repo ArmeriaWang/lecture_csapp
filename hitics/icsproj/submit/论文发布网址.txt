@@ -1,0 +1,2 @@
+Markdown无图版发布地址：https://www.cnblogs.com/yearwhk/p/12114989.html
+Word/PDF完整版发布地址：https://github.com/ArmeriaWang/lecture_csapp/tree/master/hitics/icsproj/submit
